@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activities.AddEmployeeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/colorWhite"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Employee"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="45dp"
+                android:paddingBottom="15dp">
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/profile_icon"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    app:civ_border_color="@color/colorWhite"
+                    app:civ_border_width="2dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_profileimagenotuploaded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_profileimagenotuploaded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please Upload Profile Image"
+                        android:textAlignment="center"
+                        android:textColor="#ba160c"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_uploadImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Upload Image"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter User's Name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Blood Group"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_bloodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Blood Group"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="Bank Details"-->
+<!--                    android:textColor="@color/colorDarkGray"-->
+<!--                    android:textSize="14sp" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginLeft="3dp"-->
+<!--                        android:hint="(Bank Name,A/C No,Branch Name and IFSC code)"-->
+<!--                        android:textColor="@color/colorDarkGray"-->
+<!--                        android:textSize="10sp" />-->
+<!--                </LinearLayout>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/ed_user_bankDetails"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:hint="Enter Bank Details"-->
+<!--                    android:inputType="textMultiLine"-->
+<!--                    android:textSize="14sp" />-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Bank Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_bankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Bank Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Bank Account Number"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_bankAccNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Bank Account Number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Branch Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_branchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Branch Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IFSC Code"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_ifscCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter IFSC Code"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Company Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_companyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Company's Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Company Address"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_companyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Company's Address"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Designation"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Designation"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Date of Birth"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_DOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Date of Birth"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Email Id"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Email Id"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Experience"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter User Experience"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Father's Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_fatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Father Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Mother's Name"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_motherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Mother Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Gender"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textSize="14sp"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/rbFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textSize="14sp"></RadioButton>
+                    </RadioGroup>
+                    <!--                <EditText-->
+                    <!--                    android:id="@+id/user_gender"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="3dp"-->
+                    <!--                    android:editable="false"-->
+                    <!--                    android:focusableInTouchMode="false"-->
+                    <!--                    android:inputType="text"-->
+                    <!--                    android:text=""-->
+                    <!--                    android:textSize="14sp" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Joining Date"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_joiningDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Joining Date"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Local Address"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_localAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Local Address"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Notice Period"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Notice Period"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Employee Has Passport?"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbPassport_Yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textSize="14sp"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rbPassport_No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="14sp"></RadioButton>
+                </RadioGroup>
+                <!--                <EditText-->
+                <!--                    android:id="@+id/ed_user_passport"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="3dp"-->
+                <!--                    android:hint="Enter Whether User has Passport or Not?"-->
+                <!--                    android:inputType="text"-->
+                <!--                    android:textSize="14sp" />-->
+            </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Password"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Password"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Permanent Address"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_permanentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Permanent Address"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Salary"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter User's Salary"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Status"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="14sp" />
+
+
+<!--                <EditText-->
+<!--                    android:id="@+id/ed_user_status"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:hint="Enter User's Status"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textSize="14sp" />-->
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_user_status"
+                    >
+
+                </android.support.v7.widget.AppCompatSpinner>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Guardian Number"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_user_guardianNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="Enter Guardian Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_add_employee"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Add"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn_colour"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"
+            android:backgroundTint="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Site"
+            android:textAllCaps="true"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Company"
+            android:textSize="14sp"
+            android:textColor="@color/colorDarkGray"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/selectCompany"
+            android:layout_marginTop="3dp">
+
+
+        </android.support.v7.widget.AppCompatSpinner>
+        <!--<EditText-->
+            <!--android:id="@+id/companyName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:maxLength="10"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:textSize="14sp"-->
+            <!--android:text=""-->
+            <!--android:inputType="text"-->
+            <!--/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Site Name"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorDarkGray"/>
+
+        <EditText
+            android:id="@+id/ed_siteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:hint="Enter Site Name"
+            android:inputType="textMultiLine"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Site Address"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorDarkGray"/>
+
+        <EditText
+            android:id="@+id/ed_siteAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:hint="Enter Site Address"
+            android:inputType="textMultiLine"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorDarkGray"/>
+
+        <EditText
+            android:id="@+id/ed_siteMobileNumberOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:hint="Enter Mobile Number"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alternative Mobile Number"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorDarkGray"/>
+
+        <EditText
+            android:id="@+id/ed_alternativeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:hint="Enter Alternative Number"
+            android:inputType="text"
+            />
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_registerCompany"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_colour"
+        android:text="Register Site"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
